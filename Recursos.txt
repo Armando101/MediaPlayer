@@ -1,0 +1,7 @@
+- Metodos de media element: https://developer.mozilla.org/es/docs/Web/API/HTMLMediaElement
+- Qué es el DOM: https://developer.mozilla.org/es/docs/Glossary/DOM
+- DOMContenLoaded: https://developer.mozilla.org/es/docs/Web/Events/DOMContentLoaded
+- Window: load event: https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+- Async: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona
+- Deferred: https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm/Deferred
+- Apuntes: https://github.com/JasanHdz/javascript-professional/tree/master/notes

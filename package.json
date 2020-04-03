@@ -1,0 +1,16 @@
+{
+  "name": "media-player",
+  "version": "1.0.0",
+  "description": "Proyecto de media player",
+  "main": "lib/MediaPlayer.js",
+  "scripts": {
+    "start": "live-server"
+  },
+  "keywords": [],
+  "author": "Armando Rivera",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "typescript": "^3.5.3"
+  }
+}
