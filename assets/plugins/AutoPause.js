@@ -4,6 +4,11 @@ class AutoPause {
 		// Esta linea es importante para mantener el contexto de la función handleIntersection
 		// De lo contrario no encontraria this.player
 		this.handleIntersection = this.handleIntersection.bind(this);
+		this.handleVisibilityChange = this.handleVisibilityChange.bind(this);
+		
+		// Esta propiedad nos permite respetar las pausas
+		// Si colocamos pausa y después nos cambiamos de tab y regresamos se pone play y no respeta la pausa
+		this.pausedByVisibility = false;
 	}
 	run(player) {
 		// Hacemos player una instancia de la clase
@@ -20,6 +25,11 @@ class AutoPause {
 		// nuestro objeto observer lo ponemos a observar
 		// Observará el media
 		observer.observe(this.player.media)
+		
+		// Escuchamos el envento visibilitychange
+		// Este evento nos permitirá saber si el usuario cambio de pantalla
+		document.addEventListener('visibilitychange', this.handleVisibilityChange);
+
 	}
 
 	// Cuando observer llame a handleIntersection le pasará una lista de entries
@@ -37,6 +47,23 @@ class AutoPause {
 			this.player.play();
 		} else {
 			this.player.pause();
+		}
+	}
+
+	handleVisibilityChange() {
+		const isVisible = document.visibilityState === "visible";
+
+		if (isVisible) {
+			if (this.pausedByVisibility) {
+				this.player.play();
+			}
+		} else {
+			if (!this.player.media.paused) {
+				this.player.pause();			
+				this.pausedByVisibility = true;
+			} else {
+				this.pausedByVisibility = false;
+			}
 		}
 	}
 }
