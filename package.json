@@ -4,13 +4,17 @@
   "description": "Proyecto de media player",
   "main": "lib/MediaPlayer.js",
   "scripts": {
-    "start": "live-server"
+    "start": "parcel index.html assets/**/*.html"
   },
   "keywords": [],
   "author": "Armando Rivera",
   "license": "ISC",
   "devDependencies": {
-    "live-server": "^1.2.1",
+    "parcel-bundler": "^1.12.4",
     "typescript": "^3.5.3"
-  }
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ],
+  "dependencies": {}
 }

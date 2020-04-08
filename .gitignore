@@ -106,3 +106,6 @@ temp/
 
 # End of https://www.gitignore.io/api/node
 
+# Archivos de Typescript
+.cache
+dist

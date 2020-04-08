@@ -1,0 +1,33 @@
+Introducción a Typescript
+	Typescript es un superset de JS
+	Nos permitirá agregar tipado a JS
+
+	Typescript nos ayudará a detectar errores de manera temprana y hará que el desarrollo se vuelva más cómodo y serguro.
+
+	LiveServer no nos permite pasar código Typescript a JS
+	Para eso instalamos parcel
+
+		- npm install -D parcel-bundler
+
+	Cambiamos el script package.json
+		"scripts": {
+			"start": "parcel index.html assets/**/*.html"
+		}
+
+	También indicamos que vamos a usar la última versión de chrome, esto es útil para Typescript
+
+	"browserslist": [
+	      "last 1 Chrome version"
+	  ]
+
+
+	 Eliminamos live-server
+	 	- npm rm live-server
+
+	Corremos el script:
+		- npm start
+
+	Abrimos el servidor indicando el index.html
+		localhost:1234/index.html
+
+	
