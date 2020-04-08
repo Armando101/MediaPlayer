@@ -1,4 +1,14 @@
+// Para convertirlo en una clase con TypeScrip es sencillo ya que ya tenemos mucho trabajo hehco
+
+// Primero declaramos las variables
+// En este caso colocamos como privada la propiedad threshold
+
+import MediaPlayer from '../MediaPlayer';
+
 class AutoPause {
+	private threshold: number;
+	player: MediaPlayer;
+
 	constructor() {
 		this.threshold = 0.35;
 		// Esta linea es importante para mantener el contexto de la función handleIntersection
@@ -35,7 +45,7 @@ class AutoPause {
 	// Cuando observer llame a handleIntersection le pasará una lista de entries
 	// Los entries son objetos que estamos observando
 	// En este caso sólo tenemos uno
-	handleIntersection(entries) {
+	private handleIntersection(entries: IntersectionObserverEntry[]) {
 		const entry = entries[0];
 
 		// Podemos observar en el navegador la propiedad intersectionRatio
@@ -50,7 +60,7 @@ class AutoPause {
 		}
 	}
 
-	handleVisibilityChange() {
+	private handleVisibilityChange() {
 		const isVisible = document.visibilityState === "visible";
 
 		if (isVisible) {
