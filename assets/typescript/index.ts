@@ -1,16 +1,4 @@
 console.log("Hello, Typescript");
-
-// Después del identificador de la variable coloco dos puntos para indicar el tipo de dato
-function add(a: number, b: number) {
-	return a + b;
-}
-
-// sum también será un number
-const sum = add(2, 3);
-console.log(sum);
-console.log(typeof(sum));
-
-//****************************************//
 // Tipos de datos comunes
 
 // Boolean
@@ -71,3 +59,47 @@ console.log(comodin);
 // Object
 let someObject : object = {}
 console.log(someObject);
+
+//****************************************//
+
+// Funciones 
+
+// Después del identificador de la variable coloco dos puntos para indicar el tipo de dato
+// Le indico después de los paréntesis que el valor de retorno será un number
+function add(a: number, b: number): number {
+	return a + b;
+}
+
+// sum también será un number
+const sum = add(2, 3);
+console.log(sum);
+console.log(typeof(sum));
+
+// Una función puede regresar una función
+
+// Indica que recibe un number y devuelve un number
+// (number) => number
+function createAdder(a: number): (number) => number {
+	return function (b: number) {
+		return b + a;
+	}
+}
+
+const addFour = createAdder(4);
+const fourPlus6 = addFour(6);
+
+console.log(addFour);
+console.log(fourPlus6);
+
+// Para indicar que un número sea opcional colco un signo de interrogación, en este caso puede ser undefined o string
+// lastName?: string
+
+// Si no queremos un valor undefined sino uno por omisión colocamos despúes del tipo de dato colocamos el valor por default
+// lastName: string = ''
+function fullName(firstName: string, lastName: string = ''): string {
+	return `${firstName} ${lastName}`;
+}
+
+const richard = fullName('Armando');
+
+console.log(richard);
