@@ -30,7 +30,11 @@ async function precache(argument) {
 	// nos devuelve una promesa
 	const cache = await caches.open(VERSION);
 
+	// Si obtenemos un error seguramente es porque estos archivos ya no existen
+	// Esto porque parce los duplicó con otros nombres en la carpeta dist
+	// Por ahora los comentamos
 	return cache.addAll([
+/*
 		'./',
 		'./index.html',
         './index.js',
@@ -39,6 +43,7 @@ async function precache(argument) {
         './plugins/AutoPlay.js',
         './index.css',
         './BigBunny.mp4'
+*/
 	]);
 }
 
