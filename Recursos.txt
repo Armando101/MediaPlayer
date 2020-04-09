@@ -5,3 +5,14 @@
 - Async: https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona
 - Deferred: https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/PromiseUtils.jsm/Deferred
 - Apuntes: https://github.com/JasanHdz/javascript-professional/tree/master/notes
+
+
+¿Qué atributo usamos cuando queremos que la petición de un script sea asíncrona pero que tan pronto termine de cargar, el script se ejecute?
+
+¿Qué es un closure?
+
+¿Cómo pasamos los argumentos a una función utilizando apply?
+
+¿Qué queue tiene mayor prioridad?
+
+¿Cuál event disponible en los service workers usas para pre-cache de assets de una página y prepararla para funcionar offline? 
