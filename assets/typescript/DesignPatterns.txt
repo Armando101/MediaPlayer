@@ -1,0 +1,69 @@
+¿Qué es un patrón de diseño?
+	Es una solución para un problema dentro de un contexto.
+	
+	Contexto:
+		- El contexto es la situación donde el partrón aplica
+		- Esta sitaución debe ser recurrente.
+
+		Ejemplo:Muchos objetos están interesados en el estado de otro objeto.
+
+	Problema:
+		- Se refere a la meta que estás tratando de alcanzar dentro del contexto.
+		- El problema incluye todas las limitaciones que existen dentro de este contexto.
+		
+		Ejemplo: Estos objetos quieren recibir notificaciones cuando cambie el estado sin tener que solicitar la información.
+
+	Solución:
+		- Un diseño genérico que alcanza la meta del contexto.
+
+		Ejemplo: Crear una clase donde cualquier objeto se puede suscribir y desuscribir a cambios en el estado.
+
+	Los patrones de diseño involucran un nivel de complejidad es por eso que hay que evitarlos siempre que sea posible.
+
+***********************************************************************
+Categorías de patrones de diseño
+	
+	Se dividen en tres categorías:
+
+	Creacionales:
+		Proveen distintas formas de crear objetos, los patrones que pertenecen a esta categorías son:
+			- Abstract factory
+			- Builder
+			- Factory Method
+			- Prototype
+			- Singleton
+
+		Builder: Permite crear varios objetos a travez de un objeto fuente.
+		Separa la creación de un objeto complejo de su estructura, de tal forma que el mismo proceso de construcción puede servir para crear representaciones diferentes.
+
+
+	Estructurales:
+		Desciben formas de componer objetos para formar nuevas estructuras flexibles y eficientes.
+			- Adapter
+			- Bridge
+			- Composite
+			- Decorator
+			- Façade
+			- Flyweight
+			- Proxy
+
+		Adapter: expone una interfaz externa y esconde una interfaz interna.
+
+	Patrones de comportamiento
+		Ofrecen formas de manejar algorítmos, objetos y relaciones entre ellos.
+			- Chain of Responsability
+			- Command
+			- Interpreter
+			- Iterator
+			- Mediator
+			- Memento
+			- Observer
+			- State
+			- Strategy
+			- Template Method
+			- Visitor
+
+***********************************************************************
+Patrón Singleton y Casos de Uso
+	
+	Singleton (creacional): Es un patrón que te asegura que una clase sólo tienen una instancia, esta única instancia puede ser consumida poro cualquier otro objeto.

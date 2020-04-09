@@ -4,7 +4,7 @@
   "description": "Proyecto de media player",
   "main": "lib/MediaPlayer.js",
   "scripts": {
-    "start": "parcel index.html assets/**/*.html"
+    "start": "parcel index.html assets/**/*.html assets/**/**/*.html"
   },
   "keywords": [],
   "author": "Armando Rivera",
