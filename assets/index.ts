@@ -21,9 +21,10 @@ button.onclick = () => {
 buttonMute.onclick = () => {
   player.toggleMute();
 }
-
+/*
 if ('servicwWorker' in navigator) {
 	navigator.servicwWorker.register('/sw.js').catch(error => {
 		console.log(error.message);
 	});
 }
+*/
