@@ -1,13 +1,14 @@
-import MediaPlayer from './MediaPlayer.ts'
-import AutoPlay from './plugins/AutoPlay.ts';
-import AutoPause from './plugins/AutoPause.ts';
+import MediaPlayer from './MediaPlayer'
+import AutoPlay from './plugins/AutoPlay';
+import AutoPause from './plugins/AutoPause';
+import Ads from './plugins/Ads';
 
 const video = document.querySelector('video');
 const button: HTMLElement = document.querySelector('button');
 const buttonMute: HTMLElement = document.getElementById('muteButton');
 
 // Creamos la instancia del objeto MediaPlayer
-const player = new MediaPlayer({el: video, plugins:[new AutoPlay, new AutoPause]});
+const player = new MediaPlayer({el: video, plugins:[new AutoPlay, new AutoPause, new Ads]});
 
 // HTML media element tiene un método llamado play
 button.onclick = () => {
